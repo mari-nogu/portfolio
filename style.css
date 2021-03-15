@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: 'Kosugi Maru', sans-serif;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 100%;
+}
+
+#splash {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #ffe1ca;
+    text-align: center;
+    color: #ff6d00;
+}
+
+
+header {
+    grid-row: 1;
+    grid-column: 1;
+    font-family: 'Ranchers', cursive;
+    padding: 15px 0;
+    text-align: center;
+    background-image: linear-gradient(#ffe1ca 90%, transparent);
+}
+
+header a {
+    display: block;
+    text-decoration: none;
+    color: #ff6d00;
+    font-size: 4rem;
+}
+
+header img {
+    width: 60px;
+    padding: 0 15px 0 0;
+    vertical-align: center;
+}
+
+main {
+    grid-row: 2;
+    grid-column: 1;
+
+    margin: 0;
+
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 10vw 1fr 10vw;
+}
+
+section {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 550px 1fr;
+    margin-bottom: 70px;
+}
+
+section img {
+    width: 100%;
+    max-height: 100%;
+}
+
+section figure {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    margin: 20px 0;
+}
+
+section div {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+section div p {
+    margin:0;
+}
+
+#udon {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#udon figure {
+    position: relative;
+  width: 70vw;
+    height: 35vw;
+  overflow: hidden;
+}
+
+@keyframes slideshow1 {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  45%{
+    opacity: 1
+  }
+  55%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#udon img {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+    opacity: 0;
+  animation :slideshow1 10s linear infinite;
+}
+
+#udon img:last-child{
+    width: 70%;
+    max-width: 35vw;
+  animation-delay: 5s;
+}
+
+#cat {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+
+#cat figure {
+    position: relative;
+    width: 100%;
+    height: 35vw;
+  overflow: hidden;
+}
+
+@keyframes slideshow2 {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  11%{
+    opacity: 1
+  }
+  21%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#cat img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    opacity: 0;
+  animation :slideshow2 30s linear infinite;  
+}
+
+#cat img:nth-child(2){
+  animation-delay: 5s;
+}
+
+#cat img:nth-child(3){
+  animation-delay: 10s;
+}
+
+#cat img:nth-child(4){
+  animation-delay: 15s;
+}
+
+#cat img:nth-child(5){
+  animation-delay: 20s;
+}
+
+#cat img:last-child{
+  animation-delay: 25s;
+}
+
+#sphere {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#marine {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+#porco {
+    grid-row: 5;
+    grid-column: 2;
+}
+
+nav {
+    grid-row: 2;
+    grid-column: 1;
+    z-index: 100;
+    background-color: rgba(255, 225, 202, 0.95);
+    display: none;
+}
+
+.open nav {
+    display: block;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: sticky;
+    top: 15vh;
+}
+
+.btn-nav {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+nav a {
+    display: block;
+    margin: 20px 100px;
+    border-bottom: solid 1px #fff;
+    color: #ff6d00;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn,
+.btn-close {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: start;
+    align-self: center;
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    color: #ff6d00;
+    font-size: 3rem;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+}
+
+.btn-close {
+    display: none;
+}
+
+.open .btn {
+    display: none;
+}
+
+.open .btn-close {
+    display: block;
+    z-index: 150;
+}
+
+footer {
+    grid-row: 3;
+    grid-column: 1;
+    padding: 15px 0;
+    background-image: linear-gradient(transparent, #ffe1ca 20%);
+    text-align: center;
+    font-family: 'Ranchers', cursive;
+    color: #ff6d00;
+}
+
+footer p {
+    position: fixed;
+    bottom: 1vh;
+    right: 2vw;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ff6d00;
+}
