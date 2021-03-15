@@ -55,7 +55,7 @@ main {
 section {
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 550px 1fr;
+    grid-template-columns: 1fr 650px 1fr;
     margin-bottom: 70px;
 }
 
@@ -66,7 +66,7 @@ section img {
 
 section figure {
     grid-row: 1;
-    grid-column: 1 / -1;
+    grid-column: 2;
     justify-self: center;
     align-self: center;
     margin: 20px 0;
